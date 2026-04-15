@@ -1,4 +1,5 @@
 #!/bin/bash
+composer install --no-interaction --prefer-dist --no-progress
 until php bin/console doctrine:query:sql "SELECT 1" >/dev/null 2>&1; do
 	sleep 2
 done
